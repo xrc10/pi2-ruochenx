@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Mon Sep 14 21:38:17 EDT 2015 */
+/* First created by JCasGen Mon Sep 14 22:37:02 EDT 2015 */
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -12,7 +12,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** Inherit BasicAnnot to record the score for an answer.
- * Updated by JCasGen Mon Sep 14 21:38:17 EDT 2015
+ * Updated by JCasGen Mon Sep 14 22:37:02 EDT 2015
  * @generated */
 public class Score_Type extends BasicAnnot_Type {
   /** @generated 
@@ -45,26 +45,26 @@ public class Score_Type extends BasicAnnot_Type {
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Score");
  
   /** @generated */
-  final Feature casFeat_answer;
+  final Feature casFeat_answerId;
   /** @generated */
-  final int     casFeatCode_answer;
+  final int     casFeatCode_answerId;
   /** @generated
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
-  public int getAnswer(int addr) {
-        if (featOkTst && casFeat_answer == null)
-      jcas.throwFeatMissing("answer", "Score");
-    return ll_cas.ll_getRefValue(addr, casFeatCode_answer);
+  public int getAnswerId(int addr) {
+        if (featOkTst && casFeat_answerId == null)
+      jcas.throwFeatMissing("answerId", "Score");
+    return ll_cas.ll_getIntValue(addr, casFeatCode_answerId);
   }
   /** @generated
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
-  public void setAnswer(int addr, int v) {
-        if (featOkTst && casFeat_answer == null)
-      jcas.throwFeatMissing("answer", "Score");
-    ll_cas.ll_setRefValue(addr, casFeatCode_answer, v);}
+  public void setAnswerId(int addr, int v) {
+        if (featOkTst && casFeat_answerId == null)
+      jcas.throwFeatMissing("answerId", "Score");
+    ll_cas.ll_setIntValue(addr, casFeatCode_answerId, v);}
     
   
  
@@ -104,8 +104,8 @@ public class Score_Type extends BasicAnnot_Type {
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_answer = jcas.getRequiredFeatureDE(casType, "answer", "Answer", featOkTst);
-    casFeatCode_answer  = (null == casFeat_answer) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_answer).getCode();
+    casFeat_answerId = jcas.getRequiredFeatureDE(casType, "answerId", "uima.cas.Integer", featOkTst);
+    casFeatCode_answerId  = (null == casFeat_answerId) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_answerId).getCode();
 
  
     casFeat_score = jcas.getRequiredFeatureDE(casType, "score", "uima.cas.Float", featOkTst);

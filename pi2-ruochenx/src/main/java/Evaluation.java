@@ -8,16 +8,16 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 
-/** Inherit BasicAnnot to locate a sentence annotation.
+/** Inherit BasicAnnot to record the Precision@N score for the question and all of its answers.
  * Updated by JCasGen Mon Sep 14 22:37:02 EDT 2015
  * XML source: /home/ruochenx/git/pi2-ruochenx/pi2-ruochenx/src/main/resources/pi2-ruochenx-typesystem.xml
  * @generated */
-public class Sentence extends BasicAnnot {
+public class Evaluation extends BasicAnnot {
   /** @generated
    * @ordered 
    */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = JCasRegistry.register(Sentence.class);
+  public final static int typeIndexID = JCasRegistry.register(Evaluation.class);
   /** @generated
    * @ordered 
    */
@@ -31,14 +31,14 @@ public class Sentence extends BasicAnnot {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected Sentence() {/* intentionally empty block */}
+  protected Evaluation() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
-  public Sentence(int addr, TOP_Type type) {
+  public Evaluation(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
@@ -46,7 +46,7 @@ public class Sentence extends BasicAnnot {
   /** @generated
    * @param jcas JCas to which this Feature Structure belongs 
    */
-  public Sentence(JCas jcas) {
+  public Evaluation(JCas jcas) {
     super(jcas);
     readObject();   
   } 
@@ -56,7 +56,7 @@ public class Sentence extends BasicAnnot {
    * @param begin offset to the begin spot in the SofA
    * @param end offset to the end spot in the SofA 
   */  
-  public Sentence(JCas jcas, int begin, int end) {
+  public Evaluation(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
     setEnd(end);
@@ -72,6 +72,28 @@ public class Sentence extends BasicAnnot {
    */
   private void readObject() {/*default - does nothing empty block */}
      
-}
+ 
+    
+  //*--------------*
+  //* Feature: precision
+
+  /** getter for precision - gets Precision@N, where N is the number of correct answers.
+   * @generated
+   * @return value of the feature 
+   */
+  public float getPrecision() {
+    if (Evaluation_Type.featOkTst && ((Evaluation_Type)jcasType).casFeat_precision == null)
+      jcasType.jcas.throwFeatMissing("precision", "Evaluation");
+    return jcasType.ll_cas.ll_getFloatValue(addr, ((Evaluation_Type)jcasType).casFeatCode_precision);}
+    
+  /** setter for precision - sets Precision@N, where N is the number of correct answers. 
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setPrecision(float v) {
+    if (Evaluation_Type.featOkTst && ((Evaluation_Type)jcasType).casFeat_precision == null)
+      jcasType.jcas.throwFeatMissing("precision", "Evaluation");
+    jcasType.ll_cas.ll_setFloatValue(addr, ((Evaluation_Type)jcasType).casFeatCode_precision, v);}    
+  }
 
     

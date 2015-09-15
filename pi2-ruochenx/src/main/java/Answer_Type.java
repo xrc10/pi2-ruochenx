@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Mon Sep 14 21:38:17 EDT 2015 */
+/* First created by JCasGen Mon Sep 14 22:37:02 EDT 2015 */
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -11,8 +11,8 @@ import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
-/** Inherit Sentence to locate a answer annotation.
- * Updated by JCasGen Mon Sep 14 21:38:17 EDT 2015
+/** Inherit Sentence to locate an answer annotation.
+ * Updated by JCasGen Mon Sep 14 22:37:02 EDT 2015
  * @generated */
 public class Answer_Type extends Sentence_Type {
   /** @generated 
@@ -67,6 +67,30 @@ public class Answer_Type extends Sentence_Type {
     ll_cas.ll_setBooleanValue(addr, casFeatCode_isCorrect, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_id;
+  /** @generated */
+  final int     casFeatCode_id;
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
+  public int getId(int addr) {
+        if (featOkTst && casFeat_id == null)
+      jcas.throwFeatMissing("id", "Answer");
+    return ll_cas.ll_getIntValue(addr, casFeatCode_id);
+  }
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
+  public void setId(int addr, int v) {
+        if (featOkTst && casFeat_id == null)
+      jcas.throwFeatMissing("id", "Answer");
+    ll_cas.ll_setIntValue(addr, casFeatCode_id, v);}
+    
+  
 
 
 
@@ -82,6 +106,10 @@ public class Answer_Type extends Sentence_Type {
  
     casFeat_isCorrect = jcas.getRequiredFeatureDE(casType, "isCorrect", "uima.cas.Boolean", featOkTst);
     casFeatCode_isCorrect  = (null == casFeat_isCorrect) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_isCorrect).getCode();
+
+ 
+    casFeat_id = jcas.getRequiredFeatureDE(casType, "id", "uima.cas.Integer", featOkTst);
+    casFeatCode_id  = (null == casFeat_id) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_id).getCode();
 
   }
 }

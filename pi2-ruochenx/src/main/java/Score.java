@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Mon Sep 14 21:38:17 EDT 2015 */
+/* First created by JCasGen Mon Sep 14 22:37:02 EDT 2015 */
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -9,7 +9,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** Inherit BasicAnnot to record the score for an answer.
- * Updated by JCasGen Mon Sep 14 21:38:17 EDT 2015
+ * Updated by JCasGen Mon Sep 14 22:37:02 EDT 2015
  * XML source: /home/ruochenx/git/pi2-ruochenx/pi2-ruochenx/src/main/resources/pi2-ruochenx-typesystem.xml
  * @generated */
 public class Score extends BasicAnnot {
@@ -75,25 +75,25 @@ public class Score extends BasicAnnot {
  
     
   //*--------------*
-  //* Feature: answer
+  //* Feature: answerId
 
-  /** getter for answer - gets The answer with which the score is assigned.
+  /** getter for answerId - gets The id of answer with which the score is assigned.
    * @generated
    * @return value of the feature 
    */
-  public Answer getAnswer() {
-    if (Score_Type.featOkTst && ((Score_Type)jcasType).casFeat_answer == null)
-      jcasType.jcas.throwFeatMissing("answer", "Score");
-    return (Answer)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Score_Type)jcasType).casFeatCode_answer)));}
+  public int getAnswerId() {
+    if (Score_Type.featOkTst && ((Score_Type)jcasType).casFeat_answerId == null)
+      jcasType.jcas.throwFeatMissing("answerId", "Score");
+    return jcasType.ll_cas.ll_getIntValue(addr, ((Score_Type)jcasType).casFeatCode_answerId);}
     
-  /** setter for answer - sets The answer with which the score is assigned. 
+  /** setter for answerId - sets The id of answer with which the score is assigned. 
    * @generated
    * @param v value to set into the feature 
    */
-  public void setAnswer(Answer v) {
-    if (Score_Type.featOkTst && ((Score_Type)jcasType).casFeat_answer == null)
-      jcasType.jcas.throwFeatMissing("answer", "Score");
-    jcasType.ll_cas.ll_setRefValue(addr, ((Score_Type)jcasType).casFeatCode_answer, jcasType.ll_cas.ll_getFSRef(v));}    
+  public void setAnswerId(int v) {
+    if (Score_Type.featOkTst && ((Score_Type)jcasType).casFeat_answerId == null)
+      jcasType.jcas.throwFeatMissing("answerId", "Score");
+    jcasType.ll_cas.ll_setIntValue(addr, ((Score_Type)jcasType).casFeatCode_answerId, v);}    
    
     
   //*--------------*

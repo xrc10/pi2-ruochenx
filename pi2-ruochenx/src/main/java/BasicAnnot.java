@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Mon Sep 14 21:38:17 EDT 2015 */
+/* First created by JCasGen Mon Sep 14 22:37:02 EDT 2015 */
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -10,7 +10,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** Basic type that records the name of a component that produces the annotation and confidence score assigned to the annotation.
- * Updated by JCasGen Mon Sep 14 21:38:17 EDT 2015
+ * Updated by JCasGen Mon Sep 14 22:37:02 EDT 2015
  * XML source: /home/ruochenx/git/pi2-ruochenx/pi2-ruochenx/src/main/resources/pi2-ruochenx-typesystem.xml
  * @generated */
 public class BasicAnnot extends Annotation {

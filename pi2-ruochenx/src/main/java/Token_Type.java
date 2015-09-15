@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Mon Sep 14 21:38:17 EDT 2015 */
+/* First created by JCasGen Mon Sep 14 22:37:02 EDT 2015 */
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -10,7 +10,7 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
 /** Inherit BasicAnnot to locate and record a token after tokenization.
- * Updated by JCasGen Mon Sep 14 21:38:17 EDT 2015
+ * Updated by JCasGen Mon Sep 14 22:37:02 EDT 2015
  * @generated */
 public class Token_Type extends BasicAnnot_Type {
   /** @generated 

@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Mon Sep 14 21:38:17 EDT 2015 */
+/* First created by JCasGen Mon Sep 14 22:37:02 EDT 2015 */
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -13,7 +13,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** Basic type that records the name of a component that produces the annotation and confidence score assigned to the annotation.
- * Updated by JCasGen Mon Sep 14 21:38:17 EDT 2015
+ * Updated by JCasGen Mon Sep 14 22:37:02 EDT 2015
  * @generated */
 public class BasicAnnot_Type extends Annotation_Type {
   /** @generated 

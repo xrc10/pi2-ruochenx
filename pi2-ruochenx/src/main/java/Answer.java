@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Mon Sep 14 21:38:17 EDT 2015 */
+/* First created by JCasGen Mon Sep 14 22:37:02 EDT 2015 */
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -8,8 +8,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 
-/** Inherit Sentence to locate a answer annotation.
- * Updated by JCasGen Mon Sep 14 21:38:17 EDT 2015
+/** Inherit Sentence to locate an answer annotation.
+ * Updated by JCasGen Mon Sep 14 22:37:02 EDT 2015
  * XML source: /home/ruochenx/git/pi2-ruochenx/pi2-ruochenx/src/main/resources/pi2-ruochenx-typesystem.xml
  * @generated */
 public class Answer extends Sentence {
@@ -94,6 +94,28 @@ public class Answer extends Sentence {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_isCorrect == null)
       jcasType.jcas.throwFeatMissing("isCorrect", "Answer");
     jcasType.ll_cas.ll_setBooleanValue(addr, ((Answer_Type)jcasType).casFeatCode_isCorrect, v);}    
+   
+    
+  //*--------------*
+  //* Feature: id
+
+  /** getter for id - gets Unique indentification number for each answer. 
+   * @generated
+   * @return value of the feature 
+   */
+  public int getId() {
+    if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_id == null)
+      jcasType.jcas.throwFeatMissing("id", "Answer");
+    return jcasType.ll_cas.ll_getIntValue(addr, ((Answer_Type)jcasType).casFeatCode_id);}
+    
+  /** setter for id - sets Unique indentification number for each answer.  
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setId(int v) {
+    if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_id == null)
+      jcasType.jcas.throwFeatMissing("id", "Answer");
+    jcasType.ll_cas.ll_setIntValue(addr, ((Answer_Type)jcasType).casFeatCode_id, v);}    
   }
 
     
